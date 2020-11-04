@@ -86,7 +86,7 @@ img {
   z-index: -1;
 }
 
-.modal-open {
+.open-modal {
   opacity: 1;
   z-index: 999;
 }
@@ -127,10 +127,16 @@ button {
   right: 5%;
 }
 
-.main-img {
+.main-img-container {
   height: 60%;
   width: 100%;
   margin: 2rem auto;
+}
+
+.main-img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 .modal-img {
