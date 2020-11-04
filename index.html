@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>California Cities Gallery</title>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- responsive grid -->
+    <link rel="stylesheet" href="./grid.css" />
+  </head>
+  <body>
+    <section class="LA">
+      <div class="section group">
+        <div class="img-container col span-1-of-4">
+          <img src="./images/LA-1.jpg" alt="" />
+        </div>
+        <div class="img-container col span-1-of-4">
+          <img src="./images/LA-2.jpg" alt="" />
+        </div>
+        <div class="img-container col span-1-of-4">
+          <img src="./images/LA-3.jpg" alt="" />
+        </div>
+        <div class="img-container col span-1-of-4">
+          <img src="./images/LA-4.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="SF">
+      <div class="section group">
+        <div class="img-container col span-1-of-4">
+          <img src="./images/SF-1.jpg" alt="" />
+        </div>
+        <div class="img-container col span-1-of-4">
+          <img src="./images/SF-2.jpg" alt="" />
+        </div>
+        <div class="img-container col span-1-of-4">
+          <img src="./images/SF-3.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <div class="modal">
+      <button class="close-btn">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <!-- prev next buttons -->
+      <button class="prev-btn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="next-btn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      <div class="modal-content">
+        <!-- content -->
+        <div class="main-img">
+          <img src="./images/LA-1.jpg" alt="" />
+        </div>
+        <h2 class="modal-heading">Los Angeles</h2>
+        <div class="modal-images">
+          <div class="modal-img modal-img-chosen">
+            <img src="./images/LA-1.jpg" alt="" />
+          </div>
+          <div class="modal-img">
+            <img src="./images/LA-2.jpg" alt="" />
+          </div>
+          <div class="modal-img">
+            <img src="./images/LA-3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

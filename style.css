@@ -1,0 +1,146 @@
+/* TABLE OF CONTENTS */
+
+/* =====================
+1. Global Styles
+2. Body
+3. 
+4. 
+5. 
+6. 
+7. 
+====================== */
+
+/* =======================
+1. GLOBAL STYLES
+=========================*/
+
+:root {
+  --clr-primary: #161515;
+  --clr-primary-light: #b5bb98;
+  --clr-secondary: #436346;
+  --clr-tertiatry: #532f52;
+  --clr-red: #c44536;
+  --clr-grey: #4e4545;
+  --clr-grey-light: #eee;
+  --ff-primary: 'Roboto';
+  --transition: all 0.4s linear;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  color: var(--clr-primary);
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 1rem;
+}
+
+section {
+  max-width: 1170px;
+  margin: 4rem auto;
+}
+
+/* =======================
+2. BODY
+=========================*/
+
+.img-container {
+  background-color: pink;
+  height: 12rem;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.LA {
+  margin-bottom: 10rem;
+}
+
+.modal {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  opacity: 0.95;
+  top: 0;
+  left: 0;
+  transition: var(--transition);
+  opacity: 0;
+  z-index: -1;
+}
+
+.modal-open {
+  opacity: 1;
+  z-index: 999;
+}
+
+.modal-content {
+  width: 70%;
+  height: 100%;
+  position: relative;
+  margin: 4rem auto;
+  text-align: center;
+}
+
+.modal-heading {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  background: transparent;
+  color: white;
+  border-color: transparent;
+  cursor: pointer;
+  font-size: 3rem;
+  position: absolute;
+}
+.close-btn {
+  top: 1rem;
+  right: 3rem;
+}
+
+.prev-btn {
+  top: 50%;
+  left: 5%;
+}
+
+.next-btn {
+  top: 50%;
+  right: 5%;
+}
+
+.main-img {
+  height: 60%;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.modal-img {
+  height: 100px;
+  width: 15%;
+  margin: 0 0.4rem;
+  display: inline-block;
+  opacity: 0.4;
+}
+
+.modal-img-chosen {
+  opacity: 1;
+}
