@@ -18,6 +18,7 @@ class Gallery {
     this.nextImage = this.nextImage.bind(this);
     this.displayMain = this.displayMain.bind(this);
     this.prevImage = this.prevImage.bind(this);
+    this.selectModal = this.selectModal.bind(this);
 
     // event listener for opening modal
     this.section.addEventListener(
@@ -49,6 +50,7 @@ class Gallery {
     this.closebtn.addEventListener('click', this.closeModal);
     this.nextBtn.addEventListener('click', this.nextImage);
     this.prevBtn.addEventListener('click', this.prevImage);
+    this.modalImages.addEventListener('click', this.selectModal);
   }
 
   closeModal() {
@@ -56,6 +58,7 @@ class Gallery {
     this.closebtn.removeEventListener('click', this.closeModal);
     this.nextBtn.removeEventListener('click', this.nextImage);
     this.prevBtn.removeEventListener('click', this.prevImage);
+    this.modalImages.removeEventListener('click', this.selectModal);
   }
 
   displayMain(image) {
@@ -80,6 +83,15 @@ class Gallery {
     prevModalImage.classList.add('modal-img-chosen');
     this.displayMain(prevModalImage.firstElementChild);
   }
+
+  selectModal = function (e) {
+    const currentSelected = get('.modal-img-chosen');
+    if (e.target.parentElement.classList.contains('modal-img')) {
+      currentSelected.classList.remove('modal-img-chosen');
+      e.target.parentElement.classList.add('modal-img-chosen');
+      this.displayMain(e.target);
+    }
+  };
 }
 
 const LA = new Gallery(get('.LA'));
